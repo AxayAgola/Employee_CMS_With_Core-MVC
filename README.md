@@ -1,0 +1,5 @@
+![Screenshot 2024-04-24 132531](https://github.com/AxayAgola/Employee_CMS_With_Core-MVC/assets/146311148/9b0c4e85-e7af-4c5b-a1d5-8cde386d10da)
+![Screenshot 2024-04-24 132546](https://github.com/AxayAgola/Employee_CMS_With_Core-MVC/assets/146311148/338fcc2d-7766-4704-8078-50b473242a48)
+![Screenshot 2024-04-24 132623](https://github.com/AxayAgola/Employee_CMS_With_Core-MVC/assets/146311148/7eac5c22-4134-410a-8d26-7947b49d8643)
+![Screenshot 2024-04-24 132607](https://github.com/AxayAgola/Employee_CMS_With_Core-MVC/assets/146311148/3c8f7cb8-ee93-4574-8985-6706fec5daab)
+![Screenshot 2024-04-24 132635](https://github.com/AxayAgola/Employee_CMS_With_Core-MVC/assets/146311148/27ce5bf2-0b62-41bd-bc81-34a5e2ce208d)
