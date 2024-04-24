@@ -1,0 +1,34 @@
+﻿@model IEnumerable<EmployeeModel>
+@inject IHttpContextAccessor contxt;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h1 style="text-align:center;">Employee Details</h1>
+    <table class="table table-bordered table-responsive table-light">
+     <tr class="bg-info">
+            <th class="card-header bg-warning text-white text-uppercase">Id</th>
+            <th class="card-header bg-warning text-white text-uppercase">Name</th>
+            <th class="card-header bg-warning text-white text-uppercase">Department</th>
+            <th class="card-header bg-warning text-white text-uppercase">Salary</th>
+            <th class="card-header bg-warning text-white text-uppercase">Edit</th>
+            <th class="card-header bg-warning text-white text-uppercase">Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Department</td>
+                <td>@item.Salary</td>
+                <td>
+                    <a class="btn btn-outline-dark" asp-action="EditEmployee" asp-route-id="@item.Id">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-outline-info"  asp-action="DeleteEmployee" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,53 @@
+﻿@model EmployeeModel
+
+@{
+ ViewData["Title"] = "DeleteEmployee";
+ Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+ <div class="card-header bg-warning text-white text-uppercase">
+ <h4>Delete Employee</h4>
+ </div>
+ <div class="card-body">
+ @if (Model != null)
+ {
+ <form method="post">
+ <input type="hidden" asp-for="Id" />
+ <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+ <label asp-for="Name" class="label-control">Name : </label>
+ @Html.Label(Model.Name)
+ </div>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+ <label asp-for="Department" class="label-control">Department : </label>
+ @Html.Label(Model.Department)
+ </div>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+ <label asp-for="Salary" class="label-control">Salary : </label>
+ @Html.Label(Model.Salary.ToString())
+ </div>
+ </div>
+ </div>
+ <div class="form-group">
+<button type="submit" class="btn btn-outline-warning rounded-0">Delete</button>
+ </div>
+ </form>
+ }
+ @if (TempData["msg"] != null)
+ {
+ <script>
+ alert('@TempData["msg"].ToString();');
+ window.location.href = "@Url.Action("Index", "Employee")";
+ </script>
+ }
+ </div>
+</div>
