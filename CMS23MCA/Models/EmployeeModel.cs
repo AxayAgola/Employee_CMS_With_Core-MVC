@@ -39,43 +39,6 @@ namespace CMS23MCA.Models
             }
             return lstEmp;
         }
-        //Retrieve single record from a table
-        public EmployeeModel getData(string Id)
-        {
-            EmployeeModel emp = new EmployeeModel();
-            SqlCommand cmd = new SqlCommand("select * from emp where id='" + Id + "'", con);
-            con.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                while (dr.Read())
-                {
-                    emp.Id = Convert.ToInt32(dr["Id"].ToString());
-                    emp.Name = dr["name"].ToString();
-                    emp.Department = dr["dept"].ToString();
-                    emp.Salary = Convert.ToInt32(dr["salary"].ToString());
-                }
-            }
-            con.Close();
-            return emp;
-        }
-
-        //Select & Login a record into a database table
-        public bool login(EmployeeModel Emp)
-        {
-            bool res = false;
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select * from emp where Id = @Id And Name = @Name", con);
-            cmd.Parameters.AddWithValue("@Id", Emp.Id);
-            cmd.Parameters.AddWithValue("@Name", Emp.Name);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                res = true;
-            }
-            con.Close();
-            return res;
-        }
         //Insert a record into a database table
         public bool insert(EmployeeModel emp)
         {
